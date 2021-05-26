@@ -12,6 +12,8 @@
 		<li><a href="210520.jsp">체크박스1_210520</a></li>
 		<li><a href="210523.jsp">문제1</a></li>
 		<li><a href="210524.jsp">문제2</a>
+		<li><a href="210525.jsp">문제3</a>
+		<li><a href="210527.jsp">문제4</a>
 	
 	</ul>
 
