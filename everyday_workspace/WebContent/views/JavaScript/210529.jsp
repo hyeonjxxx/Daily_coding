@@ -49,7 +49,19 @@
         form.addEventListener('sumbit', function(e){
             e.preventDefault()
             const message = doucment.querySelector("#massage");
-            const feedback
+            const feedback = doucment.querySelector(".fedback");
+            const messageContent = doucment.querySelector('.message-content');
+            
+           if(message.value == ''){
+        	   feedeback.classList.add('show');
+        	   setTimeout(function(){
+        		   feedback.classList.remove('show')
+        	   		}, 2000)
+       	   }else{
+       		   messageContent.textContent = message.value
+       		   message.value= ''
+       	   }
+            
         })
     })
 
