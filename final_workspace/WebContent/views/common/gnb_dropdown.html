@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .navigator {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(44, 62, 80);
+        }
+
+        li {float: left;}
+
+        li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {background-color: rgb(52, 152, 219);}
+
+        li.dropdown {
+        display: inline-block;
+        }
+
+        .nav_sub {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .nav_sub a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .nav_sub a:hover {background-color: #f1f1f1;}
+
+        .dropdown:hover .nav_sub {display: block;}
+        
+        /* 페이징처리 */
+        .pagination {display: inline-block;}
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        .pagination a.active { color: rgb(52, 152, 219);}
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}        
+    </style>
+</head>
+<body>
+   <div class="gnb_wrap">
+    <ul class="navigator">
+        <li><a href="#home">회원관리</a></li>
+        <li><a href="#news">메뉴관리</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">펀딩관리</a>
+          <div class="nav_sub">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">결제관리</a>
+          <div class="nav_sub">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          </div>
+            <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">고객센터</a>
+          <div class="nav_sub">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 3</a>
+          </div>
+      </ul>
+   </div> 
+
+   <div class="content_wrap">
+        <br>
+        <h4>회원 조회</h4>
+        <hr>
+
+        <div class="container">
+            <table class="table" align="center">
+                <thead>
+                    <tr>
+                        <th>회원번호</th>
+                        <th>이메일</th>
+                        <th>이름</th>
+                        <th>가입일</th>
+                        <th>파트너 유무</th>
+                        <th>파트너명</th>
+                        <th>상태</th>
+                        <th>관리</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>28</td>
+                        <td>USER11@gmail.com</td>
+                        <td>김지원</td>
+                        <td>2021-05-17</td>
+                        <td>Y</td>
+                        <td>니브</td>
+                        <td>Y</td>
+                        <td><button>탈퇴</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+   </div>
+
+   <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+   </div>
+
+  
+
+
+  </div>
+</body>
+</html>

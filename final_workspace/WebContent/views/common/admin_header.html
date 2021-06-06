@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가치가자</title>
+    
+    <!-- jQuery 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 부트스트랩에서 제공하고 있는 스타일 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- 부트스트랩에서 제공하고 있는 스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        *{font-family: 나눔고딕;}
+        div{box-sizing: border-box; border: 1px solid red;}
+
+        /* header */
+        .header{        
+            width:1000px;
+            height: 340px;
+            padding-top: 20px;
+            margin:auto;
+        }
+        .header a{text-decoration: none; color: black;}
+
+        /* header_web */
+        .header_web>div{height: 100%; float: left; margin-bottom: 20px;}
+        
+        .logo_img{width: 60%; position: relative;}
+        .login_area{width: 40%;}
+
+        .logo_img>img{height: 50px;}
+        .login_area { text-align: center; line-height: 50px; font-size: 14px;}
+        .login_area>a:hover{cursor: pointer;}
+
+        /* navigator */
+        .navigator{ border-top: 1px solid silver;}
+        .navi{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            list-style-type: none;
+        }
+        .navi>li{
+            float: left;
+            width: 20%;
+            height: 100%;
+            text-align: center;
+        }
+        .navi a{
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            background: rgb(44, 62, 80);;
+            display: block;
+            line-height: 40px;
+        }
+
+        .navi>li>ul a{ font-size: 13px;}
+
+        .navi a:hover{background-color:rgb(52, 152, 219);}
+
+        .navi>li>ul{ 
+            list-style-type: none;
+            padding: 0;
+            display: none;
+        }
+        .navi>li>a:hover+ul{
+            display: block;
+        }
+        .navi>li>ul:hover{
+            display: block;
+        }
+        .navi-sub a{
+            background: lightgray;
+            color: black;
+        }        
+        /* 세부 페이지마다 공통적으로 유지할 style */
+        .content_wrap{
+            margin-top: 10px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <div class="header_web">
+            <div class="logo_img"><img src="../../resources/logo.PNG" alt="로고"></div>
+            <div class="login_area">
+                <!-- 로그인전 -->
+                <a href="">로그인</a>
+                <!-- 로그인 후 
+                <label>관리자님</label>  &nbsp;&nbsp;
+                <a href="">로그아웃</a>
+                -->
+            </div>
+        </div>
+
+        <div class="navigator">
+            <ul class="navi">
+                <li><a href="">회원관리</a></li>
+
+                <li><a href="">메뉴관리</a></li>
+
+                <li><a>펀딩관리</a>
+                    <ul class="navi-sub">
+                        <li><a href="">펀딩조회</a></li>
+                        <li><a href="">실시간랭킹</a></li>
+                    </ul>
+                </li>
+                <li><a href="">결제관리</a> </li>
+
+                <li><a href="">고객센터</a>
+                    <ul class="navi-sub">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">문의하기</a></li>
+                        <li><a href="">신고하기</a></li>
+                        <li><a href="">실시간채팅</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content_wrap">
+        여기에 내용 작성
+    </div>
+
+</body>
+</html>
