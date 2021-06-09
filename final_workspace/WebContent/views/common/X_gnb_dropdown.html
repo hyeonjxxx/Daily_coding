@@ -5,12 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
+  <!-- jQuery 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- 부트스트랩에서 제공하고 있는 스타일 -->
+  <!-- 부트스트랩에서 제공하고 있는 스크립트 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- navi css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+      /* header */
+        .head{        
+          width:1200px;
+          height: 340px;
+          padding-top: 20px;
+          margin:auto;
+       }
+        .head a{text-decoration: none; color: black;}
         .navigator {
         list-style-type: none;
         margin: 0;
@@ -74,6 +86,17 @@
     </style>
 </head>
 <body>
+    <div class="head_main">
+      <div class="logo_img"><img src="../../resources/logo.PNG" alt="로고"></div>
+      <div class="login_area">
+          <!-- 로그인전 -->
+          <a href="">로그인</a>
+          <!-- 로그인 후 
+          <label>관리자님</label>  &nbsp;&nbsp;
+          <a href="">로그아웃</a>
+          -->
+      </div>
+    </div>
    <div class="gnb_wrap">
     <ul class="navigator">
         <li><a href="#home">회원관리</a></li>
@@ -83,7 +106,6 @@
           <div class="nav_sub">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
           </div>
         </li>
         <li class="dropdown">
@@ -136,7 +158,8 @@
                     </tr>
                 </tbody>
             </table>
-        </div>  
+        </div>
+
    </div>
 
    <div class="pagination">
