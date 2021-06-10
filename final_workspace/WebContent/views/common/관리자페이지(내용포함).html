@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    	<!-- jQuery 라이브러리 -->
+    <!-- jQuery 라이브러리 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- 부트스트랩에서 제공하고 있는 스타일 -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-        *{box-sizing: border-box; border: 1px solid pink;} 
+        *{box-sizing: border-box;} 
 
         /* header */
         .head{        
@@ -40,7 +40,7 @@
         .head a{text-decoration: none; color: black;}
 
         /* header_web */
-        .head_main>div{height: 100%; float: left; margin-bottom: 20px;}
+        .head_main>div{float: left; margin-bottom: 20px;}
         
         .logo_img{width: 30%; position: relative;}
         .head_center{width: 50%;}
@@ -55,13 +55,11 @@
         .navi{
             margin: 0;
             padding: 0;
-            height: 100%;
             list-style-type: none;
         }
         .navi>li{
             float: left;
             width: 20%;
-            height: 100%;
             text-align: center;
         }
         .navi a{
@@ -91,11 +89,11 @@
         .navi>li>ul:hover{
             display: block;
         }
-        .navi-sub a{
+        .navi_sub a{
             background: lightgray;
             color: rgb(19, 19, 19);
         }  
-        .navi-sub a:hover{
+        .navi_sub a:hover{
             background: rgb(196, 195, 195);
             color: rgb(19, 19, 19);
         }      
@@ -118,6 +116,19 @@
         .container{
             max-width: 1000px;
         }
+
+        /* paging */
+        .paging_wrap{width:fit-content;margin:auto; margin-top: 100px;}
+       
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
       
 	</style>
 
@@ -138,7 +149,7 @@
             <div class="head_center"></div>
             <div class="login_area">
                 <!-- 로그인전 -->
-                <a href="">로그인</a>
+                <a data-toggle="modal" data-target="#manaLogin">로그인</a>
             
                 <!-- 로그인 후 -->
                 <!-- 
@@ -148,14 +159,14 @@
             </div>
         </div>
 
-        <div class="head_navi">
+        <div class="gnb_wrap">
             <ul class="navi">
                 <li><a href="">회원관리</a></li>
 
                 <li><a href="">메뉴관리</a></li>
 
                 <li><a>펀딩관리</a>
-                    <ul class="navi-sub">
+                    <ul class="navi_sub">
                         <li><a href="">펀딩조회</a></li>
                         <li><a href="">실시간랭킹</a></li>
                     </ul>
@@ -163,7 +174,7 @@
                 <li><a href="">결제관리</a> </li>
 
                 <li><a href="">고객센터</a>
-                    <ul class="navi-sub">
+                    <ul class="navi_sub">
                         <li><a href="">공지사항</a></li>
                         <li><a href="">FAQ</a></li>
                         <li><a href="">문의하기</a></li>
@@ -233,7 +244,8 @@
                         <td>Y</td>
                         <td>니브</td>
                         <td>Y</td>
-                        <td><button>탈퇴</button></td>
+                        <td><button type="button" class="btn-sm" data-toggle="modal" data-target="#delModal">탈퇴</button></td>
+
                     </tr>
                     <tr>
                         <td>28</td>
@@ -243,7 +255,8 @@
                         <td>Y</td>
                         <td>니브</td>
                         <td>Y</td>
-                        <td><button>탈퇴</button></td>
+                        <td><button type="button" class="btn-sm" data-toggle="modal" data-target="#delModal">탈퇴</button></td>
+
                     </tr>
                     <tr>
                         <td>28</td>
@@ -253,7 +266,7 @@
                         <td>Y</td>
                         <td>니브</td>
                         <td>Y</td>
-                        <td><button>탈퇴</button></td>
+                        <td><button type="button" class="btn-sm" data-toggle="modal" data-target="#delModal">탈퇴</button></td>
                     </tr>
                     <tr>
                         <td>28</td>
@@ -263,7 +276,7 @@
                         <td>Y</td>
                         <td>니브</td>
                         <td>Y</td>
-                        <td><button>탈퇴</button></td>
+                        <td><button type="button" class="btn-sm" data-toggle="modal" data-target="#delModal">탈퇴</button></td>
                     </tr>
                     <tr>
                         <td>28</td>
@@ -273,17 +286,7 @@
                         <td>Y</td>
                         <td>니브</td>
                         <td>Y</td>
-                        <td><button>탈퇴</button></td>
-                    </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>USER11@gmail.com</td>
-                        <td>김지원</td>
-                        <td>2021-05-17</td>
-                        <td>Y</td>
-                        <td>니브</td>
-                        <td>Y</td>
-                        <td><button>탈퇴</button></td>
+                        <td><button type="button" class="btn-sm" data-toggle="modal" data-target="#delModal">탈퇴</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -292,7 +295,7 @@
         <br clear="both"><br>
 
         <!-- 페이징 -->
-        <div class="pagingArea">
+        <div class="paging_wrap">
             <ul class="pagination">
                 <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
