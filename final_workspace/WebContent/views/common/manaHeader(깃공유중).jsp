@@ -146,13 +146,14 @@
 
                 <li><a href="">메뉴관리</a></li>
 
-                <li><a>펀딩관리</a>
+				<li><a href="">펀딩관리</a> </li>
+
+                <li><a>결제관리</a>
                     <ul class="navi_sub">
-                        <li><a href="">펀딩조회</a></li>
-                        <li><a href="">실시간랭킹</a></li>
+                        <li><a href="">주문내역</a></li>
+                        <li><a href="">환불신청 내역</a></li>
                     </ul>
                 </li>
-                <li><a href="">결제관리</a> </li>
 
                 <li><a href="">고객센터</a>
                     <ul class="navi_sub">

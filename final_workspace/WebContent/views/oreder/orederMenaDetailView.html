@@ -14,12 +14,10 @@
 
         /* 세부 페이지마다 공통적으로 유지할 style(통합시 안가져감) */
         .content_wrap{
-            width: 80%; 
+            width: 1200px; 
             margin: auto;
-            margin-top: 160px;
-            position: absolute;
-            top: 10%;
-            left: 10%; 
+            margin-top: 80px;
+            padding: 0 40px; 
         }
         .title{
             border-bottom: 1px solid lightgray; 
@@ -28,6 +26,9 @@
             padding: 0 10px;
             font-size: 23px;
             font-weight: 550;
+        }
+        .container{
+            max-width: 1000px;
         }
 
         /*  */
@@ -48,6 +49,12 @@
         }
 
         /* 여기서만 css */
+        .container table tr th{background-color: rgb(238, 238, 238);}
+        .data1{margin: 60px 0;}
+        .tableName{float: left; font-size: 18px; font-weight: 550;}
+        
+        .button_area{float: right; margin: 150px 60px;}
+        .button_area button{margin: 0 10px;}
     </style>
 </head>
 <body>
@@ -60,92 +67,83 @@
             <label>주문내역 상세정보</label>
         </div>
         <div class="container">
-            <table class="table table-bordered">
-                <label>펀딩 내역</label>
-               <tr>
-                   <th>펀딩번호</th>
-                   <td>10491</td>
-               </tr>
-               <tr>
-                    <th>펀딩 주문날짜</th>
-                    <td>2021-06-09 15:20:11</td>
-                </tr>
+            <div class="data1">
+                <label class="tableName">펀딩 내역</label>
+                <table class="table table-bordered">
                 <tr>
-                    <th>펀딩 서포터</th>
-                    <td>류재석</td>
-                </tr>
-                <tr>
-                    <th>펀딩 마감일</th>
-                    <td>2021-06-20</td>
-                </tr>
-                <tr>
-                    <th rowspan="3">결제 내역</th>
-                    <td>
-                        파트너 : 니브<br>
-                        리워드 : 옵션명 블라블라<br>
-                        수량 : 1개
-                    </td>
-                </tr>            
-            </table>
-            <table class="table table-bordered">
-                <label>펀딩 결제내역</label>
-                <tr>
+                    <th>펀딩번호</th>
+                    <td>10491</td>
                     <th>펀딩 금액</th>
                     <td>44,000 원</td>
                 </tr>
                 <tr>
-                     <th>추가 후원금</th>
-                     <td>5,000 원</td>
-                 </tr>
-                 <tr>
-                     <th>배송비</th>
-                     <td>0 원</td>
-                 </tr>
-                 <tr>
-                     <th>총 결제금액</th>
-                     <td>49,000 원</td>
-                 </tr>
-                 <tr>
-                     <th>결제 방법</th>
-                     <td>신용(체크)카드</td>
-                 </tr> 
-                 <tr>
-                    <th>카드 번호</th>
-                    <td>1111-2222-1111-2222</td>
-                </tr>
-                <tr>
-                    <th>취소/환불 금액</th>
-                    <td>-</td>
-                </tr>           
-            </table>
-            <table class="table table-bordered">
-                <label>배송지 정보</label>
-                <tr>
-                    <th>배송지 </th>
-                    <td>서울시 강남구 테헤란로 110, 5층</td>
-                </tr>
-                <tr>
-                     <th>연락처</th>
-                     <td>010-1234-2341</td>
-                 </tr>
-                 <tr>
-                     <th>배송시 요청사항</th>
-                     <td></td>
-                 </tr>
-                 <tr>
-                     <th rowspan="2">운송장 번호</th>
-                     <td>
-                         택배사 <br>
-                         ㄹㅇㄴㅁㄹ
-                     </td>
-                     
-                 </tr>      
-            </table> 
+                        <th>펀딩 주문날짜</th>
+                        <td>2021-06-09 15:20:11</td>
+                        <th>추가 후원금</th>
+                        <td>5,000 원</td>
+                    </tr>
+                    <tr>
+                        <th>펀딩 서포터</th>
+                        <td>류재석</td>
+                        <th>배송비</th>
+                        <td>0 원</td>
+                    </tr>
+                    <tr>
+                        <th>펀딩 마감일</th>
+                        <td>2021-06-20</td>
+                        <th>총 결제금액</th>
+                        <td>49,000 원</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">결제 내역</th>
+                        <td rowspan="3">
+                            파트너 : 니브<br>
+                            리워드 : 옵션명 블라블라<br>
+                            수량 : 1개
+                        </td>
+                        <th>결제 방법</th>
+                        <td>신용(체크)카드</td>                        
+                    </tr> 
+                    <tr>
+                        <th>카드 번호</th>
+                        <td>1111-2222-1111-2222</td>
+                    </tr>
+                    <tr>
+                        <th>취소/환불 금액</th>
+                        <td>-</td>
+                    </tr>           
+                </table>
+            </div>
+            <div class="data1">
+                <label class="tableName">배송지 정보</label>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>배송지 </th>
+                        <td>서울시 강남구 테헤란로 110, 5층</td>
+                    </tr>
+                    <tr>
+                        <th>연락처</th>
+                        <td>010-1234-2341</td>
+                    </tr>
+                    <tr>
+                        <th>배송시 요청사항</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">운송장 번호</th>
+                        <td>
+                            택배사 <br>
+                            ㄹㅇㄴㅁㄹ
+                        </td>
+                        
+                    </tr>      
+                </table> 
+            </div> 
         </div>
         
-        <br clear="both"><br>
 
-        <div class="btn">
+
+        <div class="button_area">
             <button type="button" class="updateBtn">수 정</button>
             <button type="button" class="backBtn">목록으로</button>
         </div>

@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Load icon library(검색) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-        *{box-sizing: border-box; border: 1px solid pink;} 
+        *{box-sizing: border-box;} 
 
         /* 세부 페이지마다 공통적으로 유지할 style(통합시 안가져감) */
         .content_wrap{
@@ -31,10 +34,6 @@
             max-width: 1000px;
         }
 
-        /*  */
-        tbody>tr:hover{cursor: pointer;}
-        table *{text-align: center;}
-
 
         /* pagination */
         .paging_wrap{width:fit-content;margin:auto; margin-top: 100px;}
@@ -49,7 +48,20 @@
         }
 
         /* 여기서만 css */
-        .search_area div{float: left;}
+        /* search */
+        .search_area {height: 60px;} 
+        .search_area select{height: 36px; border-color: lightgray; outline: none;}
+
+        .searchKey_1{width: 10%; position: relative; float: left;}
+        .searchKey_2{width: 10%; float: left;}
+        .searchKey_3{width: 50%; float: right; }
+
+        .memberKeyword {width: 25%; float: left; }
+        .input-group {width: 75%; float: right; }
+
+        /* table */
+        tbody>tr:hover{cursor: pointer;}
+        table *{text-align: center;}
         .btn-sm{
             border: none;
             outline: none; 
@@ -66,21 +78,21 @@
     <!-- 헤더 -->
     <jsp:include page="../common/manaHeader.jsp"/>
 
-    <div class="content_wrap" align="center">
+    <div class="content_wrap">
         <div class="title" align="left">
             <label>회원 조회</label>
         </div>
         <div class="container">
 
             <div class="search_area">
-                 <div class="search1">
+                 <div class="searchKey_1">
                      <select name="partnerJoin" id="partnerJoin">
-                         <option value="mem">전체</option>
+                         <option value="memberAll">전체</option>
                          <option value="supporter">서포터</option>
                          <option value="partner">파트너</option>
                      </select>
                  </div>
-                 <div class="search2">
+                 <div class="searchKey_2">
                     <select name="memberStatus" id="memberStatus">
                         <option value="T">전체</option>
                         <option value="Y">활동</option>
@@ -89,20 +101,20 @@
                     </select>
                 </div>
 
-                <div class="search3">
-                    <div class="">
-                        <select name="memKeyword" id="memKeyword">
-                            <option value="mem">전체</option>
+                <div class="searchKey_3">
+                    <div class="memberKeyword">
+                        <select name="memberInfo" id="memberInfo">
+                            <option value="">전체</option>
                             <option value="memberNo">회원번호</option>
                             <option value="memberName">이름</option>
                             <option value="email">이메일</option>
                         </select>
                     </div>
 
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control col-6" placeholder="검색어를 입력하세요">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="검색어를 입력하세요">
                         <div class="input-group-append">
-                            <button class="btn btn-success" type="submit">검색</button>
+                            <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </div>
