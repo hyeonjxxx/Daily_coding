@@ -35,21 +35,62 @@
       #content{width: 100%;}
 
       /*큰제목*/
-      p{font-size: 23px; font-weight: bolder;}
+      .mainTitle{font-size: 23px; font-weight: bolder;}
       
       /* fundingList content */
       .list #content_1{height: 80%; margin-top: 50px; width: 80%;}
       .list #content_2{height: 10%; width: 80%;}
 
-      /* 페이징 */
-      #pagingArea{width:fit-content; margin:auto;}
+      /* 페이징
+      #pagingArea{width:fit-content; margin:auto;} 
+      */
 
 
 
       /* 내꺼 */
       .statusBox{border: 1px solid lightgray; padding: 20px;}
 
+      table.dTable {
+        width: 100%;
+        text-align: center;
+      }
+
       .mentBox{background: rgb(238, 237, 237); border-radius: 2px; margin: 20px 0; padding: 20px;}
+
+      .searchForm{margin: 20px 0;}
+      .keyword_1 {
+        width: 50%;
+        float: left;
+      } 
+      .keyword_2 {
+        float: right;
+      } 
+      #orderList{text-align: center;}
+      #orderList th{font-size: 12px;}
+      #orderList thead th {
+        vertical-align: inherit;
+      }
+      #orderList td{font-size: 13px;}
+
+      button.btn.btn-sm {
+        font-size: 10px;
+        text-align: justify;
+        padding: 5px;
+        
+      }
+    .table td, .table th {
+      vertical-align: inherit;
+      padding: 2px;
+    }
+
+    /* modla css */
+    button.btn.btn-primary.approvalBtn{
+      width: 48%; float: left;
+    }
+    button.btn.btn-danger.oppositionBtn{
+      width: 48%; 
+    }
+
 
     </style>
 </head>
@@ -59,7 +100,7 @@
       <!--  -->
       <div id="mypage">
           <div id="content" class="list">
-              <p>펀딩 · 발송 관리</p>
+              <p class="mainTitle">펀딩 · 발송 관리</p>
               <div id="underLine"></div>
               
               
@@ -68,7 +109,7 @@
               <div id="content_1">
                 <label>서포터 관리</label>
                 <div class="statusBox">
-                  <table class="dTable" border="1px">
+                  <table class="dTable" >
                     <tr>
                       <th rowspan="2">펀딩·배송 상태</th>
                       <th>미발송</th> 
@@ -111,7 +152,8 @@
                   목록
 
                   <form action="">
-                    <div class="">
+                    <div class="searchForm">
+                    <div class="keyword_1">
                       <select name="" id="">
                         <option value="">발송 배송 : 전체</option>
                         <option value=""></option>
@@ -124,28 +166,29 @@
                       </select>
                     </div>
 
-                    <div class="">
+                    <div class="keyword_2">
                       <select name="" id="">
                         <option value="">펀딩번호</option>
                       </select>
-                      <input type="text" class="searchForm">
+                      <input type="text" class="searchBox">
                     </div>
+                  </div>
                   </form>
 
 
-                  <table border="1">
+                  <table class="table table-border" id="orderList">
                     <thead>
                       <tr>
-                        <th>펀딩번호</th>
-                        <th>서포터 정보</th>
-                        <th>결제</th>
-                        <th>결제금액</th>
-                        <th>리워드</th>
-                        <th>발송정보</th>
-                        <th>발송 예정일</th>
-                        <th>발송·배송</th>
-                        <th>발송번호</th>
-                        <th>펀딩금 반환</th>
+                        <th width="80">펀딩번호</th>
+                        <th width="60">서포터 정보</th>
+                        <th width="60">결제</th>
+                        <th width="80">결제금액</th>
+                        <th width="200">리워드</th>
+                        <th width="110">발송정보</th>
+                        <th width="80">발송 예정일</th>
+                        <th width="80">발송·배송</th>
+                        <th width="80">발송번호</th>
+                        <th width="80">펀딩금 반환</th>
                       </tr>
                       <tr>
                         <td>10491</td>
@@ -153,10 +196,10 @@
                         <td>완료</td>
                         <td>35,000원</td>
                         <td>[얼리버드]가치가자 세트X1개</td>
-                        <td><button type="button" class="btn btn-info">발송정보 입력</button></td>
+                        <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#sendInfoModal">발송정보 입력</button></td>
                         <td>2021-05-말</td>
                         <td>미발송</td>
-                        <td>대한통운, 10659</td>
+                        <td>대한통운 <br> 10659</td>
                         <td>
                           <!-- 조건처리 해야 되는데...-->
                           <!-- 리워드 기간 -->
@@ -164,7 +207,7 @@
                           2021-05-11 ~ 2021-00-00
                           <!-- 리워드 종료일 이후 -->
                           신청 <br>
-                          <button type="button" class="btn btn-danger">확인하기</button>
+                          <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#refundInfo">확인하기</button>
                         </td>
                       </tr>
                     </thead>
@@ -172,8 +215,193 @@
 
                 </div>
 
+                <!-- 발송정보 입력창  -->
+                <!-- The Modal -->
+                <div class="modal" id="sendInfoModal">
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">발송정보 입력</h4> <br>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
 
+                        <div class="">
+                          <table>
+                            <tr>
+                              <th>펀딩번호</th>
+                              <td>10491</td>
+                            </tr>
+                            <tr>
+                              <th>서포트명</th>
+                              <td>박상이</td>
+                            </tr>
+                            <tr rowspan="2">
+                              <th>[얼리버드]가치가자 세트X1개</th>
+                            </tr>
+                            <tr>
+                              <td>옵션정보..?</td>
+                              <td>10658</td>
+                            </tr>
+                            <tr>
+                              <td>총 결제 금액</td>
+                              <td>35,000원</td>
+                            </tr> 
+                          </table>
+                        </div>
+                        <hr style="width: 95%;">
+                        <h5>발송 방법</h5>
+                        <select>
+                          <option>택배</option>
+                        </select>
+                        <h5>택배사</h5>  
+                        <select>
+                          <option value="">대한통운</option>
+                            <option value="">우체국 택배</option>
+                            <option value="">로젠 택배</option>
+                            <option value="">000택배</option>
+                        </select>
+                        <h5>송장 번호</h5>
+                        <input type="text" placeholder="숫자만 입력하세요">
+                        <h6>특수문자(-)없이 숫자만 입력해주세요</h6>
+      
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-info btn-block" data-dismiss="modal">완료</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+        
+                <!-- 환불신청내역 조회  -->
+                <!-- The Modal -->
+                <div class="modal" id="refundInfo">
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h5 class="modal-title">펀딩금 반환처리</h5>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <div class="">
 
+                          <h6>서포터가 펀딩금반환 요청한 내역을 확인하고 승인 또는 거절 처리하세요.</h6>
+                          <table>
+                            <tr>
+                              <th>펀딩번호</th>
+                              <td>10491</td>
+                            </tr>
+                            <tr>
+                              <th>서포트명</th>
+                              <td>박상이</td>
+                            </tr>
+                            <tr rowspan="2">
+                              <th>[얼리버드]가치가자 세트X1개</th>
+                            </tr>
+                            <tr>
+                              <td>옵션정보..?</td>
+                              <td>10658</td>
+                            </tr>
+                            <tr>
+                              <td>총 결제 금액</td>
+                              <td>35,000원</td>
+                            </tr> 
+                          </table>
+                        </div>
+                        <br>
+                        <p>펀딩금 반환 신청 사유</p>
+                        <table border="1px">
+                          <tr>
+                            <th>사유</th>
+                          </tr>
+                          <tr>
+                            <td>제품불량</td>
+                          </tr>
+                          <tr>
+                            <th>상세사유</th>
+                          </tr>
+                          <tr>
+                            <td>불량</td>
+                          </tr>
+                          <tr>
+                            <th>증빙자료</th>
+                          </tr>
+                          <tr>
+                            <td>파일첨부파일 : 원본명.jpg</td>
+                          </tr>
+                        </table>
+                        <hr style="width: 95%;">
+                        <table border="1px">
+                          <tr>
+                            <td colspan="2">반환 금액</td>
+                          </tr>
+                          <tr>
+                            <th>반환 신청 금액</th>
+                            <th>35,000원</th>
+                          </tr>
+                          <tr>
+                            <td colspan="2">상세 금액</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">
+                              <table border="1px">
+                                <tr>
+                                  <td>리워드 금액</td>
+                                  <td>35,000원</td>
+                                </tr>
+                                <tr>
+                                  <td>배송비</td>
+                                  <td>0원</td>
+                                </tr>
+                                <tr>
+                                  <td>추가 후원금</td>
+                                  <td>0원</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">펀딩금 반환 신청 처리</td>
+                          </tr>
+                           <tr>
+                             <td colspan="2"> 승인 </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">
+                              신청 사유가 반환 정책에 해당죈다면, 승인처리하세요. 승인처리시, 결제 취소가 진행됩니다.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">거절</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"
+                            >신청 사유가 반환 정책에 해당하지 않은 경우, 거절 처리하세요. 결제취소가 진행되지 않습니다.</td>
+                          </tr>
+                        </table>
+
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary approvalBtn" data-dismiss="modal">승인</button>
+                        <button type="button" class="btn btn-danger oppositionBtn" data-dismiss="modal">거절</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
 
 
 
@@ -183,7 +411,8 @@
               
               
               <!-- 페이징 -->
-              <div id="content_2">
+              <!--
+                 <div id="content_2">
                   <div id="pagingArea">
                       <ul class="pagination">
                           <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -194,6 +423,7 @@
                         </ul>
                   </div>
               </div>
+             -->
           
           </div>
           
