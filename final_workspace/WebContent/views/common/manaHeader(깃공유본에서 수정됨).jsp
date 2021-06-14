@@ -112,6 +112,8 @@
 	    font-size: 23px;
 	    font-weight: 550;
 	}
+	.container{ max-width: 1000px;}
+
 </style>        
 </head>
 <body>
