@@ -12,7 +12,7 @@ package java100_workspace.com.hj.part1;
 	// 파이썬(인터프리터 언어)
 	// 파이싼 코드 작성 (Test.py)--> 파이썬 코드 실행(Run)
 
-public class exercise_01  {
+public class Variable  {
 	
 	/*
 	 *  문제2. 오류를 찾아 다시 작성해보시오
@@ -49,6 +49,16 @@ public class exercise_01  {
 //				// 구현할 코드 작성
 //			}
 //	 }
+	
+	/*
+	 * 접근제한자 --> public, private, protected, default
+	 * 		   --> 클래스나 메소드네 접근할 수 있는 범위를 지정
+	 * 
+	 * 클래스 선언 --> class
+	 * 		   --> 객체를 생성하는 틀, 프레임, 공장
+	 * 클래스 이름 --> 카멜케이스(단어와 단어사이 구분-->대문자 표기)	
+	 * 
+	 */
 
 	
 
