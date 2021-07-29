@@ -1,5 +1,6 @@
 package java100_workspace.com.hj.practice.run;
 
+import java100_workspace.com.hj.practice.example.Conditional;
 import java100_workspace.com.hj.practice.example.Operator;
 import java100_workspace.com.hj.practice.example.Vairable;
 
@@ -18,10 +19,15 @@ public class Run {
 //		op.practice3();
 //		op.practice4();
 //		op.practice5();
-		op.practice8();
+//		op.practice8();
 		
 		
-	
+		Conditional co = new Conditional();
+//		co.method1();
+//		co.method2();
+		co.method3();
+		
+		
 	}
 
 }
