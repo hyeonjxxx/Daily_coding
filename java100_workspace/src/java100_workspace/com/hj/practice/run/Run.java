@@ -25,7 +25,9 @@ public class Run {
 		Conditional co = new Conditional();
 //		co.method1();
 //		co.method2();
-		co.method3();
+//		co.method3();	//
+//		co.method4();	// 가위바위보 게임
+		co.method5();	// 임의의 수 맞추기
 		
 		
 	}
