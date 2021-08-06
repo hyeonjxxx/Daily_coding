@@ -27,7 +27,7 @@ public class Run {
 //		co.method2();
 //		co.method3();	//
 //		co.method4();	// 가위바위보 게임
-		co.method5();	// 임의의 수 맞추기
+//		co.method5();	// 임의의 수 맞추기
 		
 		
 	}
