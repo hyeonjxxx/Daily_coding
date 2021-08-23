@@ -1,5 +1,6 @@
 package java100_workspace.com.hj.practice.run;
 
+import java100_workspace.com.hj.practice.example.ArrayPractice;
 import java100_workspace.com.hj.practice.example.Conditional;
 import java100_workspace.com.hj.practice.example.Operator;
 import java100_workspace.com.hj.practice.example.Vairable;
@@ -28,6 +29,14 @@ public class Run {
 //		co.method3();	//
 //		co.method4();	// 가위바위보 게임
 //		co.method5();	// 임의의 수 맞추기
+		
+
+		ArrayPractice ar = new ArrayPractice();
+//		ar.method1();
+//		ar.method2(); 
+//		ar.method3();
+		ar.method4();
+		
 		
 		
 	}
