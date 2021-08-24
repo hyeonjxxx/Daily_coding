@@ -9,8 +9,11 @@ public class Run {
 		Solution_1 s1 = new Solution_1();
 		
 		// 부족한 금액 계산하기 
-		System.out.println(s1.solution(3,20,4)); 
+		//System.out.println(s1.solution(3,20,4)); 
+		
+		System.out.println(s1.solution(13,17));
 		
 		
 	}
+
 }

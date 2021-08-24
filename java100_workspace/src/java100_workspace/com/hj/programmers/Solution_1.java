@@ -34,5 +34,36 @@ public class Solution_1 {
 	 */
 	
 
+	 public int solution(int left, int right) {
+	        int answer = 0;
+	        
+	        
+	        // 약수 어떤 정수를 나눴을때 0으로 떨어지지 않은 수
+	        // 약수의 개수가 짝수이면 +
+	        //
+	        for(int i=left; i<=right; i++){
+	        	int count = 0;
+	        	
+	            for(int j=1; j<=i; j++){
+	                if(i%j==0){
+	                    count+=1;
+	                }
+	            }
+	            
+	            System.out.println(i+"약수의 개수:"+count);
+	            if(count%2==0){
+	            	answer += i;
+	            	System.out.println(i+"일때 :"+answer);
+	            }else{
+	            	System.out.println(count);
+	            	answer -= i;
+	            	System.out.println(i+"일때 :"+answer);
+	            }
+	            
+	        }
+	        return answer;
+	        
+	    }
+	
 	
 }
