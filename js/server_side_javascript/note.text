@@ -1,0 +1,91 @@
+#인터넷의 동작 방법
+
+클라인언트--------인터넷-----------서버
+
+- 도메인(http://www.a.com)과 일치하는 IP(126.000.000)로 접속
+- 서버에는 데이터베이스서버/ 채팅서버/게임서버/웹서버 여러개의 서버가 있다.
+- 서버에 있는 port(포트) 
+
+서버쪽에 위치하면서 빠르고 편리하게 서버로 들어오는 요청을 응답하는 애플리케이션을 만들수 있는 기반의 시스테을 제공한다.
+
+#Module(모듈)
+ HTTP, OS  >>  Node.js가 제공하는 모듈
+ Date,String,Array  >>  JavaScript가 제공하는 모듈
+
+ - NPM (Node Package Manager) == Node계의 앱스토어
+   1. 어떤 모듈을 설치, 삭제, 업그레이드, 의존성 관리 역할을 한다.
+   
+   ex1. uglifyJS
+        : 띄어쓰기나 줄바꿈등이 모두 데이터이기 때문에 기계가 읽을시 필수적인 값들만 보여주게 함
+          즉, 파일축소 작업
+
+        * 설치
+        npm install uglify-js -g     
+          -g : 해당 컴퓨터 전역에 독립적으로 설치함
+        uglifyjs pretty.js -o uglified.js -m
+          -o : pretty.js파일을 난독화하여 uglified.js파일로 저장한다.
+          -m (mangle) : 지역변수와 같이 이름을 바꿔도 상관없는 변수의 이름을 한글자인 가장 짧은 이름으로 바꿔준다
+        관습적으로 파일명 생성시 >> uglified한파일명.min.js << 로 사용한다.
+      하는 역할
+
+
+    ex2.underscore
+   
+   설치전 우리의 프로젝트 디렉토리자체를 npm 패키지로 지정을 해줘야한다.
+   다른 사람이 만든 모듈을 우리꺼로 가져오기 위해 우리꺼도 패키지로 지정해줘야 한다.
+
+   1. npm init  
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (server_side_javascript)
+
+>> package name : 패키지 이름 지정 (괄호안의값이 디폴트값)
+
+2. description: Server side javascript tutorials
+   description: 해당 패키지에 대한 설명     
+
+3. entry point :
+  만든 패키지를 구동시킬 javascript 지정, 나중에 수정 바꿀수 있다.
+
+4. test command: 
+    TDD를 하면 어떤 명령을 실행하면 test를 실행시킬 건가
+    즉, test를 실행시킬 명령을 지정한다.
+
+5. git repository: 
+ 깃에 올라간다면 깃의 저장소 입력
+
+6. keywords:
+
+7. author:
+
+
+
+
+
+
+
+
+
+
+
+
+
+카드1 4100 
+카드2 295385
+524434
+
+224,949
+카드1 270280
+45,331 << 기업통당에 더 있어야 하는 돈
+
+50050
+
+45,090
