@@ -66,26 +66,12 @@ package name: (server_side_javascript)
 
 7. author:
 
+-----------------------
 
+npm install 0000  -- save: -- save가 있으면 dependencies 안의 항목으로 포함해서 설치
+일시적으로 사용할때 소스코드에 포함시킬건 아니지만 잠시 사용할 시에는  --save를 생략해서 사용함
 
-
-
-
-
-
-
-
-
-
-
-카드1 4100 
-카드2 295385
-524434
-
-224,949
-카드1 270280
-45,331 << 기업통당에 더 있어야 하는 돈
-
-50050
-
-45,090
+npm install sample -g : sample이라는 npm의 패키지를 설치하는데 전역적으로
+npm install sample : 현재 이 프로젝트에 부품으로 사용하겠다
+npm install sample --save : sample이라는 이 모듈이 package.json안에 dependency 항목 추가되기 때문에 이 프로젝트의 의존성을 명시적으로 ㅅ\
+(--save를 사용하기 전, npm init 으로 패키지 화를 먼저 해줘야 함 )
